@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trontek | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/splitting@1.0.6/dist/splitting.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/css/output.css" />
+  <link rel="stylesheet" href="./assets/css/trontek.css" />
+</head>
+
+<body>
+  <header class="fixed top-[30px] bg-transparent w-full z-50" id="header">
+    <div class="container-xl">
+        <div class="flex items-center justify-between">
+            <div class="w-[110px]">
+                <div class="cursor-pointer" id="openMenu">
+                    <div class="bar1"></div><i class="fa-solid fa-bars text-orange text-[32px]"></i>
+                </div>
+            </div>
+            <a href="index.html">
+                <img src="./assets/img/trontek-logo.webp" alt="trontek-logo" class="w-[100px] md:w-[130px]">
+            </a>
+            <a href="#" class="o-button hidden md:block">Request a Quote</a>
+        </div>
+    </div>
+</header>
+
+
+  <!-- Menu -->
+  <div class="menu bg-black w-[90%] md:w-[50%] h-screen text-white fixed top-0 z-[9999] pt-[30px]">
+    <div class="flex justify-between  items-center px-[20px]">
+      <a href="index.html" class="">
+        <img src="./assets/img/trontek-logo.webp" alt="trontek-logo" class="w-[130px]">
+      </a>
+      <div class="cursor-pointer" id="closeMenu">
+        <i class="fa-solid fa-xmark text-orange text-[50px]"></i>
+
+      </div>
+    </div>
+    <div class="flex flex-col justify-evenly text-right h-[70%]">
+
+      <nav>
+        <ul class="menu-list pr-[20px]">
+          <li><a href="index.html" class="menu-links">Home</a></li>
+          <li><a href="product.html" class="menu-links">Products</a></li>
+          <li><a href="#" class="menu-links">Technology</a></li>
+          <li><a href="#" class="menu-links">Applications</a></li>
+          <li><a href="#" class="menu-links">Why Trontek USA</a></li>
+          <li><a href="contact.html" class="menu-links">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="menu-support flex flex-col justify-center px-[20px]">
+        <a href="#" class="menu-links">Support</a>
+        <a href="#" class="menu-links">Warranty</a>
+        <a href="#" class="menu-links">Become a Dealer</a>
+      </div>
+    </div>
+  </div>
+  <main>
+    <!-- Hero Slider -->
+    <section class="">
+      <div class="relative">
+        <div class="swiper heroSlider">
+
+          <div class="swiper-wrapper">
+            <div class="swiper-slide relative">
+              <img src="assets/img/trontek-slider-1.webp" alt="trontek-slider-1">
+              <div class="hero-slider-content text-center flex flex-col items-center justify-center h-full">
+                <p class="text-white">Power Your Golf Cart with</p>
+                <h1 class="text-[35px] lg:text-[60px] text-white font-semibold uppercase text-shadow">Confidence</h1>
+                <a href="#" class="o-button absolute bottom-[7%]">Shop Batteries</a>
+              </div>
+            </div>
+            <div class="swiper-slide relative">
+              <img src="assets/img/trontek-slider-1.webp" alt="trontek-slider-1">
+              <div class="hero-slider-content text-center flex flex-col items-center justify-center h-full">
+                <p class="text-white">Power Your Golf Cart with</p>
+                <h1 class="text-[35px] lg:text-[60px] text-white font-semibold uppercase text-shadow">Confidence</h1>
+                <a href="#" class="o-button absolute bottom-[7%]">Shop Batteries</a>
+              </div>
+            </div>
+            <div class="swiper-slide relative">
+              <img src="assets/img/trontek-slider-1.webp" alt="trontek-slider-1">
+              <div class="hero-slider-content text-center flex flex-col items-center justify-center h-full">
+                <p class="text-white">Power Your Golf Cart with</p>
+                <h1 class="text-[35px] lg:text-[60px] text-white font-semibold uppercase text-shadow">Confidence</h1>
+                <a href="#" class="o-button absolute bottom-[7%]">Shop Batteries</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="swiper-pagination"></div>
+
+          <div class="swiper-button-prev hidden"></div>
+          <div class="swiper-button-next hidden"></div>
+        </div>
+
+        <div thumbsSlider="" class="swiper heroSliderThumbs hidden lg:block">
+          <!-- Swiper Wrapper -->
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="assets/img/trontek-slider-1.webp" alt="trontek-slider-1">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/trontek-slider-1.webp" alt="trontek-slider-1">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/trontek-slider-1.webp" alt="trontek-slider-1">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+          <!-- engineer  -->
+    <section class=" min-h-screen overflow-hidden relative pt-[50px]" id="engineer-section" style="background-color: #000;">
+      <div
+        class="font-bold uppercase absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full z-0" style="color: #121212;">
+        <span class="text-[30vh] leading-[27vh]">Engineered</span>
+        <span class="text-[40vh] leading-[30vh]">Tuned &</span>
+        <span class="text-[40vh] leading-[35vh]">Tested</span>
+      </div>
+      <div class="container-xl relative z-10 h-full">
+        <h2 class="h2 text-center overflow-hidden split-text" data-splitting>Engineered <br>Tuned & Tested</h2>
+        <div class="grid md:grid-cols-3">
+          <div></div>
+          <div class="py-[30px] md:min-h-screen flex items-center justify-center">
+            <span>
+              <div id="trontek-wrapper.">
+                <img src="assets/img/trontek-lithium.webp" alt="trontek-lithium" class="w-[430px]">
+              </div>
+            </span>
+          </div>
+
+          <div class="">
+            <div class="flex flex-col justify-center relative ml-auto md:w-[50%]">
+              <div class="anime-box. anime-items mb-[50px]" anime-items="50px">
+                <div class="rounded-full">
+                  <div
+                    class="gradient-border-mask flex flex-col justify-center items-center w-[100%] ml-auto py-[25px]">
+                    <div> <img src="assets/img/enery-icon.webp" alt="enery-icon"></div>
+                    <h3 class="text-orange font-bold text-[20px]">4.0kwh</h3>
+                    <p class="text-white">Energy Capcity</p>
+                  </div>
+                </div>
+              </div>
+              <div class="anime-box. anime-items mb-[50px]" anime-items="100px">
+                <div class="rounded-full">
+                  <div
+                    class="gradient-border-mask flex flex-col justify-center items-center w-[100%] ml-auto py-[25px]">
+                    <div> <img src="assets/img/prismatic.webp" alt="enery-icon"></div>
+                    <h3 class="text-orange font-bold text-[20px]">prismatic</h3>
+                    <p class="text-white">Cell Type</p>
+                  </div>
+                </div>
+              </div>
+              <div class="anime-box. anime-items mb-[50px]" anime-items="150px">
+                <div class="rounded-full">
+                  <div
+                    class="gradient-border-mask flex flex-col justify-center items-center w-[100%] ml-auto py-[25px]">
+                    <div> <img src="assets/img/prismatic.webp" alt="enery-icon"></div>
+                    <h3 class="text-orange font-bold text-[20px]">70 lbs (31.75 Kg)</h3>
+                    <p class="text-white">Cell Type</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- luxurious -->
+    <section class="luxurious-bg  lg:min-h-[100vh] relative">
+      <div class="">
+        <img src="assets/img/luxurious.webp" alt="luxurious" class="w-full h-[70vh] lg:h-full object-fill">
+      </div>
+     <div class="absolute top-0">
+      <div class="container-xl text-center pt-[50px] relative z-10">
+        <h2 class="h2">
+          Powering Your<br>
+          Journey
+        </h2>
+        <p class="text-white mt-[20px] lg:mt-[40px] lg:w-[80%] mx-auto">We bring you the most reliable and efficient
+          golf cart
+          batteries to keep you rolling smoothly, whether you’re enjoying a leisurely game of golf or using your cart
+          for everyday tasks. With advanced technology and a commitment to excellence, our batteries deliver the
+          performance, durability, and value you can count on.</p>
+      </div>
+     </div>
+    </section>
+
+    <!-- Dream -->
+    <section class="bg-black py-[50px] min-h-[100vh]:">
+      <div class="container-xl">
+        <div class="text-center">
+          <h2 class="h2">
+            Powering Dreams
+          </h2>
+          <h3 class="text-white text-[22px] uppercase mt-[10px]">Sustaining Tomorrow</h3>
+          <p class="text-white mt-[0px]">
+            Enhance Your Golf Experience with Trontek golf cart batteries
+          </p>
+          <a href="#" class="learn-more my-[30px] block">Learn More</a>
+        </div>
+        <div class="grid md:grid-cols-3 gap-y-8 md:gap-y-0 gap-x-3">
+          <div>
+            <div class="dream-items">
+              <figure class="rounded-3xl overflow-hidden">
+                <img src="assets/img/green-energy.webp" alt="green-energy">
+              </figure>
+              <h3 class="o-h-2 mt-[10px]">Green energy<br>
+                No environmental impact</h3>
+            </div>
+          </div>
+          <div>
+            <div class="dream-items">
+              <figure class="rounded-3xl overflow-hidden">
+                <img src="assets/img/cells.webp" alt="cells">
+              </figure>
+              <h3 class="o-h-2 mt-[10px]">Grade A cells<br>
+                Quality assured.</h3>
+            </div>
+          </div>
+          <div>
+            <div class="dream-items">
+              <figure class="rounded-3xl overflow-hidden">
+                <img src="assets/img/jbd-bms.webp" alt="jbd-bms">
+              </figure>
+              <h3 class="o-h-2 mt-[10px]">JBD BMS<br>
+                Safety guaranteed</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <!-- Power -->
+      <section class="bg-gray600 py-[50px]">
+        <div class="container-xl">
+          <div class="text-center">
+            <h2 class="h2 !text-orange">
+              Power Your Game
+            </h2>
+            <h3 class="text-black text-[20px] font-normal uppercase mt-[0px]">Advanced Lithium Golf Cart Battries</h3>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 lg:mt-[50px]">
+            <div class="lg:border-r-1 border-matGray mt-[30px] lg:mt-0 lg:py-[50px]">
+              <div class="power-items flex flex-col items-center">
+                <figure class="">
+                  <img src="assets/img/boost-icon.webp" alt="boost-icon" class="w-[100px]">
+                </figure>
+                <h3 class="mt-[40px] font-bold text-[20px] leading-[20px] text-center uppercase">Boost Your Ride<br> 50%
+                  More Power</h3>
+              </div>
+            </div>
+            <div class="lg:border-r-1 border-matGray mt-[30px] lg:mt-0 lg:py-[50px]">
+              <div class="power-items flex flex-col items-center">
+                <figure class="">
+                  <img src="assets/img/miles-icon.webp" alt="miles-icon" class="w-[100px]">
+                </figure>
+                <h3 class="mt-[40px] font-bold text-[20px] leading-[20px] text-center uppercase">Up to 50 Miles<br>
+                  on a Single Charge</h3>
+              </div>
+            </div>
+            <div class="lg:border-r-1 border-matGray mt-[30px] lg:mt-0 lg:py-[50px]">
+              <div class="power-items flex flex-col items-center">
+                <figure class="">
+                  <img src="assets/img/re-cycles.webp" alt="re-cycles" class="w-[100px]">
+                </figure>
+                <h3 class="mt-[40px] font-bold text-[20px] leading-[20px] text-center uppercase">4,000+ Cycles &<br>
+                  50% Lighter</h3>
+              </div>
+            </div>
+            <div class="py-[50px]">
+              <div class="power-items flex flex-col items-center">
+                <figure class="">
+                  <img src="assets/img/fast-charging-icon.webp" alt="fast-charging-icon" class="w-[100px]">
+                </figure>
+                <h3 class="mt-[40px] font-bold text-[20px] leading-[20px] text-center uppercase">Fast Charging &<br>
+                  Real-Time Monitoring</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+       <!-- Golf  -->
+    <section>
+      <div class="">
+        <div class="grid md:grid-cols-2">
+          <div>
+            <div class="golf-items pt-[300px] lg:pt-[72vh] pb-[30px] text-center"
+              style="background-image: url(./assets/img/deeper-dive.webp);">
+              <p class="uppercase text-white">Product Resources</p>
+              <h3 class="mt-[0px] font-extrabold uppercase text-white lg:text-[30px]">Ready for a deeper dive?</h3>
+              <a href="#" class="learn-more !text-white block lg:mt-[10px]">Learn More</a>
+            </div>
+          </div>
+          <div>
+            <div class="golf-items pt-[300px] lg:pt-[72vh] pb-[30px] text-center"
+              style="background-image: url(./assets/img/local-dealer.webp);">
+              <p class="uppercase text-white">Dealer Locator</p>
+              <h3 class="mt-[0px] font-extrabold uppercase text-white lg:text-[30px]">Find Your Local Dealer</h3>
+              <a href="#" class="learn-more !text-white block lg:mt-[10px]">Learn More</a>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- grass -->
+    <section class="grass-bg py-[50px]" style="background-image: url('./assets/img/grass-bg.webp');">
+      <div class="container-xl text-center">
+        <h3 class="mt-[0px] font-extrabold uppercase text-white text-[30px]">Newsletter<h3>
+            <p class="text-white mb-[15px]">
+              Stay up to date with the latest news from the world of Trontek.
+            </p>
+            <a href="#" class="o-button inline-block !font-normal !text-[25px] !px-[35px] !py-[5px]">Subscribe</a>
+      </div>
+    </section>
+
+  </main>
+  <footer class="bg-black pt-[50px]">
+    <div class="container-xl">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4">
+        <!-- 1st col -->
+        <div>
+          <a href="index.html" class="flex justify-center md:justify-start">
+            <img src="assets/img/trontek-logo.webp" alt="trontek-logo"
+              class="w-[130px] lg:w-auto">
+          </a>
+          <p class="text-white mt-[10px]">
+            Lorem Ipsum is simply dummy text of the
+            printing and typesetting industry. Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+            make
+            a type specimen book.
+          </p>
+        </div>
+        <!-- 2nd col -->
+        <div class="lg:pl-[100px]">
+          <h3 class="text-[20px] text-white font-semibold mb-[10px] mt-[20px] lg:mt-[0px] lg:mb-[20px]">Company</h3>
+          <a href="index.html" class="footer-menu-link">Home</a>
+          <a href="about.html" class="footer-menu-link">About Us</a>
+          <a href="#" class="footer-menu-link">Blog</a>
+          <a href="#" class="footer-menu-link">Become a Dealer</a>
+          <a href="#" class="footer-menu-link">Dealer Login</a>
+        </div>
+        <!-- 3rd col -->
+        <div>
+          <h3 class="text-[20px] text-white font-semibold mb-[10px] mt-[20px] lg:mt-[0px] lg:mb-[20px]">Resources</h3>
+          <a href="#" class="footer-menu-link">Installation Guides</a>
+          <a href="#" class="footer-menu-link">Compatibility Charts</a>
+          <a href="#" class="footer-menu-link">Product Resources</a>
+        </div>
+        <!-- 4th col -->
+        <div>
+          <h3 class="text-[20px] text-white font-semibold mb-[10px] mt-[20px] lg:mt-[0px] lg:mb-[20px]">Support</h3>
+          <a href="faq.html" class="footer-menu-link">FAQs</a>
+          <a href="#" class="footer-menu-link">Warranty</a>
+          <a href="#" class="footer-menu-link"> Warranty Claim</a>
+          <a href="#" class="footer-menu-link"> Retail Policy</a>
+          <a href="#" class="footer-menu-link"> UMRP Retail</a>
+          <a href="#" class="footer-menu-link"> UMRP Resale</a>
+          <a href="#" class="footer-menu-link"> Data Rights Request</a>
+        </div>
+      </div>
+      <div class="flex items-center justify-center gap-2 mt-[20px] lg:mt-[0px]">
+        <a href="#" class="rounded-full bg-white w-[40px] h-[40px] text-center flex items-center justify-center">
+          <i class="fab fa-facebook-f text-lg"></i>
+        </a>
+        <a href="#" class="rounded-full bg-white w-[40px] h-[40px] text-center flex items-center justify-center">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="#" class="rounded-full bg-white w-[40px] h-[40px] text-center flex items-center justify-center">
+          <i class="fab fa-instagram text-lg"></i>
+        </a>
+        <a href="#" class="rounded-full bg-white w-[40px] h-[40px] text-center flex items-center justify-center">
+          <i class="fab fa-linkedin-in text-lg"></i>
+        </a>
+      </div>
+      <hr class="my-[15px]">
+      <div class="lg:flex justify-between text-white pb-[20px]">
+        <p>© 2025, Trontek All rights reserved.</p>
+        <p>
+          <a href="#">Privacy Policy</a>&nbsp;&nbsp;
+          <a href="#">Terms & Conditions</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.5/bundle.min.js"></script>
+  <!-- GSAP Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- ScrollTrigger Plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Lenis -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.5/bundled/lenis.min.js"></script>
+  <!-- Splitting.js -->
+  <script src="https://cdn.jsdelivr.net/npm/splitting@1.0.6/dist/splitting.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+  <script src="./assets/js/trontek.js"></script>
+</body>
+
+</html>

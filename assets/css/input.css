@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS */
+.container{
+   
+}
+.container-xl{
+    @apply w-full xl:w-[1280px] mx-auto px-[15px] xl:px-[0px];
+}
+.o-button{
+    @apply bg-orange text-white rounded-full text-[16px] px-[15px] py-[10px] font-normal;
+}
+.menu-links{
+    @apply text-[18px] font-semibold text-matGray uppercase;
+}
+.learn-more{
+    @apply text-[18px] font-semibold text-orange uppercase;
+}
+/* heading */
+.o-h-1{
+    @apply text-[35px] leading-[35px] font-normal text-orange uppercase;
+}
+.o-h-2{
+    @apply text-[20px] leading-[22px] tracking-[1px] font-normal text-white;
+}
+.h2{
+    @apply text-[30px] leading-[30px] lg:text-[50px] lg:leading-[50px] text-orange uppercase;
+}
+.input-style{
+    @apply bg-gray100 py-4  px-4 outline-none focus:outline-none w-full cursor-text
+}

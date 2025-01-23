@@ -1,0 +1,425 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --orange: #f36f21;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: 'montserrat', sans-serif;
+  
+}
+body{
+  overflow-x: hidden;
+}
+
+p {
+  font-size: 16px;
+}
+
+::-webkit-scrollbar {
+  width: 1.7vh
+}
+
+::-webkit-scrollbar-track {
+  background: #000
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(0deg, var(--orange) 0, rgba(255, 109, 46, 0.846) 46%, #000 100%)
+}
+
+/* ============== Start Header ================= */
+/* Start Hamburger */
+
+.openbtn {
+  position: relative;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.openbtn span {
+  background: var(--orange);
+  display: inline-block;
+  position: absolute;
+  left: 14px;
+  height: 2px;
+  border-radius: 5px;
+  width: 45%;
+  transition: all 0.4s;
+
+  &:nth-of-type(1) {
+    top: 13px;
+  }
+
+  &:nth-of-type(2) {
+    top: 19px;
+  }
+
+  &:nth-of-type(3) {
+    top: 25px;
+  }
+
+  &:nth-of-type(3)::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -2px;
+    color: #fff;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+  }
+}
+
+.openbtn.active span {
+  &:nth-of-type(1) {
+    top: 14px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+  }
+
+  &:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  &:nth-of-type(3) {
+    top: 26px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+  }
+
+  &:nth-of-type(3)::after {
+    content: "";
+    transform: translateY(0) rotate(-45deg);
+    top: 5px;
+    left: 4px;
+  }
+}
+
+/* start toggle menu */
+.menu{
+  transition: all 0.5s ease-in;
+  transform: translateX(-100%);
+  overflow: hidden;
+}
+.active{
+  transform: translateX(0%);
+}
+
+.menu-list{
+  position: relative;
+}
+.menu-list::before,
+.menu-list::after
+ {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: var(--orange);
+}
+.menu-list::after{
+  left: unset;
+  right: 0;
+}
+
+/* end toggle menu */
+
+
+
+/* End Hamburger */
+
+/* ============== End Header ================= */
+
+/* Start Neon border */
+
+.gradient-border-mask {
+  display: flex;
+  position: relative;
+}
+
+.gradient-border-mask::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background: linear-gradient(45deg, #ffa908, #ff393d) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+/* End Neon border */
+
+/* start hero */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.heroSlider .swiper-slide {
+  width: 100%;
+  height: 100vh;
+}
+.heroSlider .swiper-pagination-bullet {
+  width: 13px;
+  height: 13px;
+}
+.heroSlider .swiper-pagination-bullet.swiper-pagination-bullet-active{
+  background-color: var(--orange);
+}
+
+.heroSlider .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.heroSlider .swiper-button-next:after, 
+.heroSlider .swiper-button-prev:after {
+  color: #fff;
+}
+
+/* thumbs */
+.heroSliderThumbs {
+  position: absolute;
+  right: 0px;
+  bottom: 10px;
+  width: 500px;
+  height: 100px;
+}
+
+
+.heroSliderThumbs .swiper-wrapper {
+  height: 100px;
+  overflow: hidden;
+  justify-content: end;
+}
+
+.heroSliderThumbs .swiper-slide {
+  width: 80px !important;
+  height: 80px;
+  overflow: hidden;
+  /* border: 1px solid #fff; */
+  box-shadow: 0px 4px 7px 1px #000000;
+  filter: blur(1px);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.heroSliderThumbs .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroSliderThumbs .swiper-slide.swiper-slide-thumb-active {
+  filter: blur(0px);
+}
+
+.hero-slider-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+.text-shadow{
+  text-shadow: 1px 3px 3px #000;
+}
+
+/* end hero */
+
+/* Start luxurious */
+.luxurious-bg {
+  /* min-height: 130vh;
+  height: 100%;
+  min-width: 100%;
+  background-image: url(../img/luxurious.webp);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover; */
+
+}
+
+/* end luxurious */
+.anime-items {
+   /* position: absolute; */
+  /* left: 15%; */
+  /* opacity: 0; */
+  /* width: 50%; */
+
+}
+
+/* golf section */
+.golf-items,
+.grass-bg,
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ================= Start Product Page ====================== */
+
+/* start product slider */
+.productSlider{
+
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.productSliderThumbs{
+  .swiper-wrapper{
+    margin-top: 8px;
+  }
+  .swiper-slide{
+    height: 80px;
+    cursor: pointer;
+    /* border: 1px solid red; */
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.7;
+  }
+  .swiper-slide-thumb-active img{
+    opacity: 1;
+  }
+}
+
+.accordion-content,
+.product-accordian-content {
+  display: none;
+ 
+}
+.accordion-item,
+.product-accordian-item {
+  border-bottom: 2px solid black;
+}
+.accordion-header,
+.product-accordian-header {
+  cursor: pointer;
+  padding-block: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-accordian-header{
+  padding-block: 25px;
+}
+
+.accordion-header.active,
+.accordion-content.active
+{
+  display: flex;
+}
+.product-accordian-content.active{
+display: block;
+}
+/* end product slider */
+
+/* start save cost */
+.cost-save-item{
+  display: none;
+}
+.cost-save-item.active{
+  display: block;
+}
+.cost-save-btn{
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+.cost-save-btn.active{
+  background-color: var(--orange);
+  border: 1px solid white;
+}
+/* end save cost */
+/* #descriptionTableSection{
+  background-image: url('../img/golf-ball-bg.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-position: bottom;
+} */
+
+.featuresSlider .swiper-slide img{
+  border-radius: 35px;
+  overflow: hidden;
+}
+.features-body{
+  display: none;
+}
+.features-body.active{
+display: block;
+}
+
+/* ================= End Product Page ====================== */
+
+
+/* ================= Start Contact Page ====================== */
+.input-style ::placeholder{
+  color: #8799a3;
+  font-weight: 600;
+}
+.gm-style .place-card-large {
+  display: none !important;
+  opacity: 0;
+}
+/* ================= End Contact Page ====================== */
+
+/* ================= Start FAQ Page ====================== */
+  #faq-section{
+    .cost-save-btn{
+      color: #8799a3 !important;
+    }
+    .cost-save-btn.active{
+      color: var(--orange) !important;
+      background-color: transparent !important;
+      border: none !important;
+    }
+  }
+  .a-line{
+    background-color: #8799a3;
+  }
+  .a-line{
+    background-color: #8799a3;
+  }
+  .cost-save-btn.active .a-line{
+    background-color: var(--orange);
+  }
+  
+/* ================= EndFAQ Page ====================== */
+
+/* ======= Footer ========== */
+.footer-menu-link {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 8px;
+  display: block;
+}
