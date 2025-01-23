@@ -1,111 +1,101 @@
-gsap.registerPlugin(ScrollTrigger);
-
 jQuery(document).ready(function ($) {
-  console.log($('.place-card')[0])
-  // $('place-card.place-card-large').parent().css("display","none")
-  $("#openMenu").click(function () {
-    $(".menu").addClass("active");
-  });
+  gsap.registerPlugin(ScrollTrigger);
 
-  $("#closeMenu").click(function(){
-    $(".menu").removeClass("active")
-  })
+  function HeaderFade() {
+    const navbar = document.querySelector("#header");
+    ScrollTrigger.create({
+      onUpdate: (self) => {
+        const currentScrollY = self.scroll();
+        const scrollDirection = self.direction;
 
-// Function to handle accordion functionality
-function accordian(sA) {
-  // Add click event for accordion headers
-  $(`${sA} .accordion-header`).click(function () {
-    // Remove 'active' class from all headers and close their contents
-    $(`${sA} .accordion-header`).not(this).removeClass('active').next().slideUp(200);
-    // Toggle the clicked header's active state and its content
-    $(this).toggleClass('active').next().slideToggle(200);
-  });
-}
-accordian('.accordion');
+        if (currentScrollY > 50 && scrollDirection === 1) {
+          gsap.to(navbar, {
+            opacity: 0,
+            duration: 0.3,
+            ease: "power1.out",
+          });
+        } else if (scrollDirection === -1) {
+          gsap.to(navbar, {
+            opacity: 1,
+            duration: 0.2,
+            ease: "power1.out",
+          });
+        }
 
-function productAccordian(sA) {
-  // Add click event for accordion headers
-  $(`.product-accordian-header`).click(function () {
-    // Remove 'active' class from all headers and close their contents
-    $(`.product-accordian-header`).not(this).removeClass('active').next().slideUp(200);
-    // Toggle the clicked header's active state and its content
-    $(this).toggleClass('active').next().slideToggle(200);
-  });
-}
-
-
-productAccordian();
-
-function initializeFeatureToggles() {
-  // Open the first accordion by default
-  const $firstBtn = $('.features-btn').first();
-  const $firstIcon = $firstBtn.find('.toggle-icon');
-  const $firstBody = $firstBtn.next('.features-body');
-
-  // Set the active classes and initial icon for the first accordion
-  $firstIcon.addClass('active').html('<i class="fas fa-minus"></i>');
-  $firstBody.addClass('active');
-
-  // Add click event to feature buttons
-  $('.features-btn').click(function () {
-    const $btn = $(this); // The clicked button
-    const $icon = $btn.find('.toggle-icon'); // The icon inside the button
-    const $body = $btn.next('.features-body'); // The associated body content
-
-    // Toggle the active state of the icon and the body
-    $icon.toggleClass('active');
-    $body.toggleClass('active');
-    $icon.html($icon.hasClass('active') ? '<i class="fas fa-minus"></i>' : '<i class="fas fa-plus"></i>');
-  });
-}
-initializeFeatureToggles()
-
-
-
-
-
-      // When a button is clicked
-    $(".cost-save-btn").on("click", function () {
-      // Remove active class from all buttons and items
-      $(".cost-save-btn").removeClass("active");
-      $(".cost-save-item").removeClass("active");
-
-      // Add active class to the clicked button
-      $(this).addClass("active");
-
-      // Find the index of the clicked button
-      const index = $(".cost-save-btn").index(this);
-
-      // Add active class to the corresponding item
-      $(".cost-save-item").eq(index).addClass("active");
+        lastScrollY = currentScrollY;
+      },
     });
-});
+  }
+  HeaderFade();
 
-const navbar = document.querySelector("#header");
-ScrollTrigger.create({
-  onUpdate: (self) => {
-    const currentScrollY = self.scroll();
-    const scrollDirection = self.direction;
+  function MenuToggle() {
+    $("#openMenu").click(function () {
+      $(".menu").addClass("active");
+    });
 
-    if (currentScrollY > 50 && scrollDirection === 1) {
-      // Scrolling down: Hide the navbar
-      gsap.to(navbar, {
-        opacity: 0,
-        duration: 0.3,
-        ease: "power1.out",
-      });
-    } else if (scrollDirection === -1) {
-      // Scrolling up: Show the navbar immediately
-      gsap.to(navbar, {
-        opacity: 1,
-        duration: 0.2, // Faster response when scrolling up
-        ease: "power1.out",
-      });
-    }
+    $("#closeMenu").click(function () {
+      $(".menu").removeClass("active")
+    })
+  }
+  MenuToggle()
 
-    lastScrollY = currentScrollY;
-  },
-});
+  function accordian(sA) {
+    $(`${sA} .accordion-header`).click(function () {
+      // Remove 'active' class from all headers and close their contents
+      $(`${sA} .accordion-header`).not(this).removeClass('active').next().slideUp(200);
+      $(this).toggleClass('active').next().slideToggle(200);
+    });
+  }
+  accordian('.accordion');
+
+  function productAccordian() {
+    $(`.product-accordian-header`).click(function () {
+      // Remove 'active' class from all headers and close their contents
+      $(`.product-accordian-header`).not(this).removeClass('active').next().slideUp(200);
+      $(this).toggleClass('active').next().slideToggle(200);
+    });
+  }
+  productAccordian();
+
+  function initializeFeatureToggles() {
+    // Open the first accordion by default
+    // const $firstBtn = $('.features-btn').first();
+    // const $firstIcon = $firstBtn.find('.toggle-icon');
+    // const $firstBody = $firstBtn.next('.features-body');
+
+    // Set the active classes and initial icon for the first accordion
+    // $firstIcon.addClass('active').html('<i class="fas fa-minus"></i>');
+    // $firstBody.addClass('active');
+
+    // Add click event to feature buttons
+    $('.features-btn').click(function () {
+      const $btn = $(this); // The clicked button
+      const $icon = $btn.find('.toggle-icon'); // The icon inside the button
+      const $body = $btn.next('.features-body'); // The associated body content
+
+      // Toggle the active state of the icon and the body
+      $icon.toggleClass('active');
+      $body.toggleClass('active');
+      $icon.html($icon.hasClass('active') ? '<i class="fas fa-minus"></i>' : '<i class="fas fa-plus"></i>');
+    });
+  }
+  initializeFeatureToggles()
+
+function SaveElectricity(){
+  $(".cost-save-btn").on("click", function () {
+    $(".cost-save-btn").removeClass("active");
+    $(".cost-save-item").removeClass("active");
+
+    $(this).addClass("active");
+
+    // Find the index of the clicked button
+    const index = $(".cost-save-btn").index(this);
+
+    // Add active class to the corresponding item
+    $(".cost-save-item").eq(index).addClass("active");
+  });
+}
+SaveElectricity()
 
 function swiperSliders() {
   // Home 
@@ -201,7 +191,7 @@ function swiperSliders() {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-  
+
     breakpoints: {
       640: {
         slidesPerView: 1,
@@ -216,6 +206,12 @@ function swiperSliders() {
   });
 }
 swiperSliders();
+ 
+});
+
+
+
+
 
 
 function process() {

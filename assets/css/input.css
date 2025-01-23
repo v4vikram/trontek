@@ -29,5 +29,5 @@
     @apply text-[30px] leading-[30px] lg:text-[50px] lg:leading-[50px] text-orange uppercase;
 }
 .input-style{
-    @apply bg-gray100 py-4  px-4 outline-none focus:outline-none w-full cursor-text
+    @apply bg-gray100 py-4  px-4 outline-none focus:outline-none w-full cursor-text border border-gray-400
 }
