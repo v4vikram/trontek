@@ -10,7 +10,7 @@
     @apply w-full xl:w-[1280px] mx-auto px-[15px] xl:px-[0px];
 }
 .o-button{
-    @apply bg-orange text-white rounded-full text-[16px] px-[15px] py-[10px] font-normal;
+    @apply bg-orange text-white rounded-full text-[16px] px-[15px] py-[10px] font-normal hover:bg-black transition duration-200 ease-in;
 }
 .menu-links{
     @apply text-[18px] font-semibold text-matGray uppercase;

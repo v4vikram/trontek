@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/splitting@1.0.6/dist/splitting.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
   <link rel="stylesheet" href="./assets/css/output.css" />
   <link rel="stylesheet" href="./assets/css/trontek.css" />
 </head>
@@ -21,14 +22,17 @@
     <div class="container-xl">
         <div class="flex items-center justify-between">
             <div class="w-[110px]">
-                <div class="cursor-pointer" id="openMenu">
+                <div class="cursor-pointer topBottom" id="openMenu">
                     <div class="bar1"></div><i class="fa-solid fa-bars text-orange text-[32px]"></i>
                 </div>
             </div>
-            <a href="index.html">
+            <a href="index.html" class="topBottom">
                 <img src="./assets/img/trontek-logo.webp" alt="trontek-logo" class="w-[100px] md:w-[130px]">
             </a>
-            <a href="#" class="o-button hidden md:block">Request a Quote</a>
+            <div class="topBottom">
+              <a href="#" class="o-button hidden md:block">Request a Quote</a>
+            </div>
+           
         </div>
     </div>
 </header>
@@ -72,11 +76,14 @@
 
           <div class="swiper-wrapper">
             <div class="swiper-slide relative">
-              <img src="assets/img/trontek-slider-1.webp" alt="trontek-slider-1">
+              <div class="absolute top-0 left-0 w-full h-full bg-black z-30 opacity-40"></div>
+              <img src="assets/img/trontek-slider-1.webp" alt="trontek-slider-1" class="fadeIn">
               <div class="hero-slider-content text-center flex flex-col items-center justify-center h-full">
                 <p class="text-white">Power Your Golf Cart with</p>
                 <h1 class="text-[35px] lg:text-[60px] text-white font-semibold uppercase text-shadow">Confidence</h1>
-                <a href="#" class="o-button absolute bottom-[7%]">Shop Batteries</a>
+              <div class="absolute bottom-[7%]">
+                 <a href="#" class="o-button">Shop Batteries</a>
+              </div>
               </div>
             </div>
             <div class="swiper-slide relative">
@@ -84,7 +91,9 @@
               <div class="hero-slider-content text-center flex flex-col items-center justify-center h-full">
                 <p class="text-white">Power Your Golf Cart with</p>
                 <h1 class="text-[35px] lg:text-[60px] text-white font-semibold uppercase text-shadow">Confidence</h1>
-                <a href="#" class="o-button absolute bottom-[7%]">Shop Batteries</a>
+              <div class="absolute bottom-[7%]">
+                 <a href="#" class="o-button">Shop Batteries</a>
+              </div>
               </div>
             </div>
             <div class="swiper-slide relative">
@@ -92,7 +101,9 @@
               <div class="hero-slider-content text-center flex flex-col items-center justify-center h-full">
                 <p class="text-white">Power Your Golf Cart with</p>
                 <h1 class="text-[35px] lg:text-[60px] text-white font-semibold uppercase text-shadow">Confidence</h1>
-                <a href="#" class="o-button absolute bottom-[7%]">Shop Batteries</a>
+              <div class="absolute bottom-[7%]">
+                 <a href="#" class="o-button">Shop Batteries</a>
+              </div>
               </div>
             </div>
           </div>
@@ -122,9 +133,9 @@
       </div>
     </section>
           <!-- engineer  -->
-    <section class=" min-h-screen overflow-hidden relative pt-[50px]" id="engineer-section" style="background-color: #000;">
+    <section class=" min-h-screen overflow-hidden relative pt-[50px]" id="engineer-section" style="background-color: #232323;">
       <div
-        class="font-bold uppercase absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full z-0" style="color: #121212;">
+        class="font-bold uppercase absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full z-0" style="color: #202020;">
         <span class="text-[30vh] leading-[27vh]">Engineered</span>
         <span class="text-[40vh] leading-[30vh]">Tuned &</span>
         <span class="text-[40vh] leading-[35vh]">Tested</span>
@@ -186,11 +197,11 @@
      <div class="container-xl">
       <div class="absolute top-0">
         <div class="container-xl text-center pt-[50px] relative z-10">
-          <h2 class="h2">
+          <h2 class="h2 split-text" data-splitting>
             Powering Your<br>
             Journey
           </h2>
-          <p class="text-white mt-[20px] lg:mt-[40px] lg:w-[80%] mx-auto">We bring you the most reliable and efficient
+          <p class="text-white mt-[20px] lg:mt-[40px] lg:w-[80%] mx-auto sub-para">We bring you the most reliable and efficient
             golf cart
             batteries to keep you rolling smoothly, whether you’re enjoying a leisurely game of golf or using your cart
             for everyday tasks. With advanced technology and a commitment to excellence, our batteries deliver the
@@ -204,43 +215,56 @@
     <section class="bg-black py-[50px] min-h-[100vh]:">
       <div class="container-xl">
         <div class="text-center">
-          <h2 class="h2">
+          <h2 class="h2 split-text" data-splitting>
             Powering Dreams
           </h2>
-          <h3 class="text-white text-[22px] uppercase mt-[10px]">Sustaining Tomorrow</h3>
-          <p class="text-white mt-[0px]">
+          <div class="overflow-hidden">
+            <h3 class="text-white text-[22px] uppercase mt-[10px] subHeadingAnime">Sustaining Tomorrow</h3>
+          </div>
+          
+          <div>
+
+          <div class="overflow-hidden">
+          <p class="text-white mt-[0px] sub-para">
             Enhance Your Golf Experience with Trontek golf cart batteries
           </p>
-          <a href="#" class="learn-more my-[30px] block">Learn More</a>
         </div>
-        <div class="grid md:grid-cols-3 gap-y-8 md:gap-y-0 gap-x-3">
-          <div>
-            <div class="dream-items">
-              <figure class="rounded-3xl overflow-hidden">
-                <img src="assets/img/green-energy.webp" alt="green-energy">
-              </figure>
-              <h3 class="o-h-2 mt-[10px]">Green energy<br>
-                No environmental impact</h3>
-            </div>
-          </div>
-          <div>
-            <div class="dream-items">
-              <figure class="rounded-3xl overflow-hidden">
-                <img src="assets/img/cells.webp" alt="cells">
-              </figure>
-              <h3 class="o-h-2 mt-[10px]">Grade A cells<br>
-                Quality assured.</h3>
-            </div>
-          </div>
-          <div>
-            <div class="dream-items">
-              <figure class="rounded-3xl overflow-hidden">
-                <img src="assets/img/jbd-bms.webp" alt="jbd-bms">
-              </figure>
-              <h3 class="o-h-2 mt-[10px]">JBD BMS<br>
-                Safety guaranteed</h3>
-            </div>
-          </div>
+
+         
+         <div class="overflow-hidden">
+          <a href="#" class="learn-more my-[30px] block">Learn More</a>
+         </div>
+        </div>
+       
+
+        <div class="featured">
+          <a href="#" class="text-left">
+            <figure>
+              <img src="assets/img/green-energy.webp" alt="green-energy">
+            </figure>
+            <button class="features-btn text-white mt-[10px] text-left">
+              Green energy<br>
+                No environmental impact
+            </button>
+          </a>
+          <a href="#" class="text-left">
+            <figure>
+              <img src="assets/img/cells.webp" alt="cells">
+            </figure>
+            <button class="features-btn text-white mt-[10px] text-left">
+              Grade A cells<br>
+                Quality assured.
+            </button>
+          </a>
+          <a href="#" class="text-left">
+            <figure>
+              <img src="assets/img/jbd-bms.webp" alt="jbd-bms">
+            </figure>
+            <button class="features-btn text-white mt-[10px] text-left">
+              JBD BMS<br>
+              Safety guaranteed
+            </button>
+          </a>
         </div>
       </div>
     </section>
@@ -249,10 +273,14 @@
       <section class="bg-gray600 py-[50px]">
         <div class="container-xl">
           <div class="text-center">
-            <h2 class="h2 !text-orange">
+           <div class="overflow-hidden">
+            <h2 class="h2 !text-orange split-text" data-splitting>
               Power Your Game
             </h2>
-            <h3 class="text-black text-[20px] font-normal uppercase mt-[0px]">Advanced Lithium Golf Cart Battries</h3>
+           </div>
+          <div class="overflow-hidden">
+            <h3 class="text-black text-[20px] font-normal uppercase mt-[0px] subHeadingAnime">Advanced Lithium Golf Cart Battries</h3>
+          </div>
           </div>
           <div class="grid md:grid-cols-2 lg:grid-cols-4 lg:mt-[50px]">
             <div class="lg:border-r-1 border-matGray mt-[30px] lg:mt-0 lg:py-[50px]">
@@ -379,16 +407,16 @@
         </div>
       </div>
       <div class="flex items-center justify-center gap-2 mt-[20px] lg:mt-[0px]">
-        <a href="#" class="rounded-full bg-white w-[40px] h-[40px] text-center flex items-center justify-center">
+        <a href="#" class="rounded-full bg-white w-[40px] h-[40px] text-center flex items-center justify-center hover:bg-orange hover:text-white transition duration-200 ease-in">
           <i class="fab fa-facebook-f text-lg"></i>
         </a>
-        <a href="#" class="rounded-full bg-white w-[40px] h-[40px] text-center flex items-center justify-center">
+        <a href="#" class="rounded-full bg-white w-[40px] h-[40px] text-center flex items-center justify-center hover:bg-orange hover:text-white transition duration-200 ease-in">
           <i class="fa-brands fa-x-twitter"></i>
         </a>
-        <a href="#" class="rounded-full bg-white w-[40px] h-[40px] text-center flex items-center justify-center">
+        <a href="#" class="rounded-full bg-white w-[40px] h-[40px] text-center flex items-center justify-center hover:bg-orange hover:text-white transition duration-200 ease-in">
           <i class="fab fa-instagram text-lg"></i>
         </a>
-        <a href="#" class="rounded-full bg-white w-[40px] h-[40px] text-center flex items-center justify-center">
+        <a href="#" class="rounded-full bg-white w-[40px] h-[40px] text-center flex items-center justify-center hover:bg-orange hover:text-white transition duration-200 ease-in">
           <i class="fab fa-linkedin-in text-lg"></i>
         </a>
       </div>
@@ -414,6 +442,7 @@
   <!-- Splitting.js -->
   <script src="https://cdn.jsdelivr.net/npm/splitting@1.0.6/dist/splitting.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
 
 
   <script src="./assets/js/trontek.js"></script>

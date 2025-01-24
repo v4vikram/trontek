@@ -1,166 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Overlapping Cards Animation</title>
+  <title>Image Tilt Animation</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <style>
-    * {
-      margin: 0px;
-    }
-
-    .section {
-      background-color: rgb(10, 48, 35);
-      position: relative;
-      /* height: 100vh; */
-      border: 2px solid brown;
-    }
-
-    /* .before {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100vh;
-      background-color: #ffcc66;
-      border: 1px solid green;
-    } */
-
-    .wrapper {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-
-    .container {
-      position: relative;
-      width: 80%;
-      height: 400px;
-      display: flex;
-      border: 1px solid red;
-      display: flex;
-      justify-content: center;
-    }
-
-    .image-container,
-    .card-container {
-      width: 50%;
-    }
-    .card-container{
-      display: flex;
-    }
-
-    .card {
-      width: 100%;
-      height: 60vh;
-      background: #e0e0e0;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Different colors for cards */
-    .card:nth-child(1) {
-      background: #ff0000;
-    }
-
-    .card:nth-child(2) {
-      background: #1489d3;
-    }
-
-    .card:nth-child(3) {
-      background: #00ff7b;
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
 
-<body>
-  <section style="height: 100vh; background-color: rgb(255, 77, 228);"></section>
-  <section class="section">
-    <div class="before"></div>
-    <div class="wrapper">
-      <div class="container">
-        <div class="image-container">
-          <img src="cat.jpg" alt="" class="cat">
-        </div>
-        <div class="card-container">
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-  <section style="height: 100vh; background-color: aqua;"></section>
-  <!-- <section style="height: 100vh; background-color: aqua;"></section> -->
+  <!-- Box with Image -->
+  <div class="group relative w-64 h-64 overflow-hidden rounded-xl shadow-lg bg-white hover:bg-gray-50">
+    <img 
+      src="assets/img/trontek-slider-1.webp" 
+      alt="Random" 
+      class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out"
+    />
+  </div>
 
   <script>
-    gsap.registerPlugin(ScrollTrigger);
+    // GSAP Hover Animation
+    const group = document.querySelector(".group");
+    const img = group.querySelector("img");
 
-    // Get the number of cards
-    const cards = document.querySelectorAll(".card");
-    const cardHeight = cards[0].offsetHeight; // Assuming all cards have the same height
-    const totalScrollHeight = cards.length * cardHeight;
-
-
-    // Pin the `.before` section dynamically
-    // ScrollTrigger.create({
-    //   trigger: ".before",
-    //   start: "top top",
-    //   end: `+=${totalScrollHeight}px`, // Dynamic based on total cards
-    //   pin: ".before",
-    //   scrub: true,
-    //   markers: false,
-    // });
-
-    // Pin the image dynamically
-    ScrollTrigger.create({
-      trigger: ".cat",
-      start: "center center",
-      end: `+=${totalScrollHeight}px`, // Adjust factor for dynamic scrolling
-      pin: ".cat",
-      scrub: true,
-      markers: true,
+    group.addEventListener("mouseenter", () => {
+      gsap.to(img, {
+        rotateY: -10, // Tilt on Y-axis
+        rotateX: -20, // Tilt on X-axis
+        scale: 1.07, // Slight zoom-in effect
+        duration: 0.8, // Smooth transition
+        ease: "power3.out", // Smooth easing
+      });
     });
 
-    cards.forEach((card, i) => {
-      console.log(cards)
-      // Animating each card's opacity and scale
-      gsap.fromTo(
-        card,
-        { x: "200%", }, // Initial state
-        {
-          // x: 0,
-          scrollTrigger: {
-            trigger: card,
-            start: () => `top center`, // Staggered animation
-            end: () => `center center`,
-            scrub: true,
-            markers: false,
-            onEnter: () => {
-              // Set the current card's opacity to 1
-              gsap.to(card, { x: 0 });
-            },
-            // onLeave: () => {
-            //   // Ensure the current card fades out
-            //   gsap.to(card, { opacity: 0 });
-            // },
-            // onEnterBack: () => {
-            //   // Fade in when scrolling back
-            //   gsap.to(card, { opacity: 1, duration: 0.8 });
-            // },
-            // onLeaveBack: () => {
-            //   // Fade out when scrolling back up
-            //   gsap.to(card, { opacity: 0 });
-            // },
-          },
-        }
-      );
+    group.addEventListener("mouseleave", () => {
+      gsap.to(img, {
+        rotateY: 0,
+        rotateX: 0,
+        scale: 1,
+        duration: 0.8,
+        ease: "power3.out",
+      });
     });
   </script>
 </body>
-
 </html>
