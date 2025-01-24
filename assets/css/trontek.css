@@ -542,6 +542,21 @@ p {
 
 /* ================= End Dealer Page ====================== */
 
+/* ================= Stat About Page ====================== */
+.aboutFeatures .center-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.center-line .line{
+  position: absolute;
+    top: 0;
+    left: calc(50% - 1px);
+}
+/* ================= End About Page ====================== */
+
 .dream-items img {
   filter: brightness(1) blur(4px);
 }
