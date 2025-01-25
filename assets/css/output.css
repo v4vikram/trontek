@@ -814,6 +814,10 @@ video {
   display: flex;
 }
 
+.\!flex {
+  display: flex !important;
+}
+
 .table {
   display: table;
 }
@@ -1450,6 +1454,11 @@ video {
   line-height: 1.25rem;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .\!font-normal {
   font-weight: 400 !important;
 }
@@ -2034,6 +2043,10 @@ video {
 
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:gap-10 {
