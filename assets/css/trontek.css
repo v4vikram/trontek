@@ -418,8 +418,8 @@ p {
 }
 
 
-.featured a img,
-.featured2 a img
+.featured .hover-effect img,
+.featured2 .hover-effect img
  {
   object-fit: cover;
   min-width: 100%;
@@ -437,24 +437,24 @@ p {
   justify-content: center;
 }
 
-.featured:has(a:nth-child(1):hover) {
+.featured:has(.hover-effect:nth-child(1):hover) {
   grid-template-columns: 2fr 1fr 1fr;
 }
-.featured:has(a:nth-child(2):hover) {
+.featured:has(.hover-effect:nth-child(2):hover) {
   grid-template-columns: 1fr 2fr 1fr;
 }
-.featured:has(a:nth-child(3):hover) {
+.featured:has(.hover-effect:nth-child(3):hover) {
   grid-template-columns: 1fr 1fr 2fr;
 }
 
 /* featured2 */
-.featured2:has(a:nth-child(1):hover) {
+.featured2:has(.hover-effect:nth-child(1):hover) {
   grid-template-columns: 2fr 1fr 1fr;
 }
-.featured2:has(a:nth-child(2):hover) {
+.featured2:has(.hover-effect:nth-child(2):hover) {
   grid-template-columns: 1fr 2fr 1fr;
 }
-.featured2:has(a:nth-child(3):hover) {
+.featured2:has(.hover-effect:nth-child(3):hover) {
   grid-template-columns: 1fr 1fr 2fr;
 }
 
@@ -564,9 +564,11 @@ p {
 }
 /* ================= End About Page ====================== */
 
-.dream-items img {
+/* .dream-items img,
+.power-items img
+{
   filter: brightness(1) blur(4px);
-}
+} */
 
 /* ======= Footer ========== */
 .footer-menu-link {

@@ -398,7 +398,7 @@ jQuery(document).ready(function ($) {
 
   function cardAnimation() {
     // GSAP Hover Animation
-    const groups = document.querySelectorAll(".dream-items");
+    const groups = document.querySelectorAll(".power-items");
 
     groups.forEach((box, index) => {
       const img = box.querySelector("img"); // Get the image inside the box
@@ -423,13 +423,36 @@ jQuery(document).ready(function ($) {
           scale: 1,
           duration: 0.8,
           ease: "power3.out",
-          filter: "brightness(1) blur(4px)"
+          filter: "brightness(1) blur(0px)"
         });
       });
     });
 
   }
   cardAnimation()
+
+  function HomePageAnimation(){
+    let homeTl = gsap.timeline({
+      scrollTrigger:{
+        trigger:".luxurious-bg img",
+        start:"top top",
+        end:"bottom top",
+        markers:false,
+        pinSpacing: false,
+        pin:false,
+        invalidateOnRefresh: true
+      }
+    })
+    homeTl.to('.luxurious-bg .anime-container',{
+      opacity: 1,
+      y:"-400px",
+      scrub:true,
+      duration: 1, // Add duration to control the speed of the animation
+      stagger: 0.3
+    })
+   
+  }
+  // HomePageAnimation()
 
   function AboutPageAnimation() {
     let svgTl = gsap.timeline({

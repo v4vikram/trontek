@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper Slider with Random Images</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 300px;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #fff;
+            position: relative;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .info-box {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-box p {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Slides will be generated dynamically -->
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="info-box">
+        <p id="current-slide-info">Current Slide Info: Loading...</p>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Array of random image URLs (Google-hosted images or placeholder images)
+        const randomImageUrls = [
+            'https://picsum.photos/600/300?random=1',
+            'https://picsum.photos/600/300?random=2',
+            'https://picsum.photos/600/300?random=3',
+            'https://picsum.photos/600/300?random=4',
+            'https://picsum.photos/600/300?random=5',
+        ];
+        const swiperWrapper = document.querySelector('.swiper-wrapper');
+
+        // Generate slides with random images
+        randomImageUrls.forEach((url, index) => {
+            console.log("url", url)
+            const slide = document.createElement('div');
+            slide.classList.add('swiper-slide');
+            slide.setAttribute('data-content', `Content for Image ${index + 1}`);
+            slide.innerHTML = `<img src="${url}" alt="Image ${index + 1}">`;
+            swiperWrapper.appendChild(slide);
+        });
+
+        // Initialize Swiper
+        const swiper = new Swiper('.swiper-container', {
+            slidesPerView: 2, // Display 2 slides at once
+            spaceBetween: 20,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+        // Function to update current slide information
+        function updateCurrentSlideInfo() {
+            const firstVisibleSlide = swiper.slides[swiper.activeIndex];
+            const content = firstVisibleSlide.getAttribute('data-content');
+            document.getElementById('current-slide-info').textContent = `Current Slide Info: ${content}`;
+        }
+
+        // Event listener for slide change
+        swiper.on('slideChange', updateCurrentSlideInfo);
+
+        // Initial call to set content on load
+        updateCurrentSlideInfo();
+    </script>
+</body>
+
+</html>
