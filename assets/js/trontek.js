@@ -204,6 +204,35 @@ jQuery(document).ready(function ($) {
         },
       },
     });
+    // greenFuture
+    const greenFuture = new Swiper('.greenFuture', {
+      loop: true,
+      slidesPerView: 2,
+      spaceBetween: 20,
+      speed: 1000,
+      spaceBetween: 10,
+      effect: 'slide',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 2,
+        },
+      },
+    });
   }
   swiperSliders();
 
@@ -382,7 +411,7 @@ jQuery(document).ready(function ($) {
           scale: 1.07, // Slight zoom-in effect
           duration: 0.8, // Smooth transition
           ease: "power3.out", // Smooth easing
-           filter: "brightness(1) blur(0px)"
+          filter: "brightness(1) blur(0px)"
         });
       });
 
@@ -401,6 +430,51 @@ jQuery(document).ready(function ($) {
 
   }
   cardAnimation()
+
+  function AboutPageAnimation() {
+    let svgTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#aboutLineSection",
+        start: "top 80%", // Trigger animation when the section is 80% visible
+        end: "top 30%", // End animation when the section scrolls out of view
+        scrub: true, // Smooth scrubbing effect
+      },
+    });
+
+    svgTl.to(".line1", {
+      height: "152px", // Start from height 0
+      duration: 2, // Duration of the animation
+      ease: "power4.inOut", // Smooth easing
+      scrub: true,
+      stagger: true
+    })
+      .to(".circle1", {
+        ease: "power1.inOut",
+        markers: true,
+        opacity: 1,
+      })
+      .to(".features-line", {
+        ease: "power1.inOut",
+        markers: true,
+        width: "5vw",
+        scrub: true,
+        stagger: true
+      })
+      .to(".line2", {
+        height: "405px", // Start from height 0
+        duration: 2, // Duration of the animation
+        ease: "power4.inOut", // Smooth easing
+        scrub: true,
+        stagger: true
+      }, "=+2")
+      .to(".circle2", {
+        ease: "power1.inOut",
+        markers: true,
+        opacity: 1,
+      })
+  }
+
+  // AboutPageAnimation()
 });
 
 
