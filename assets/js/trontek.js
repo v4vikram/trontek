@@ -281,7 +281,7 @@ jQuery(document).ready(function ($) {
     ScrollTrigger.create({
       trigger: ".bg-text",
       start: "top top",
-      end: `+=${gradientBoxs.length * 80}`, // Adjust end based on number of gradient boxes
+      end: `+=${gradientBoxs.length * 170}`, // Adjust end based on number of gradient boxes
       pin: true,
       markers: false, // Remove markers in production
     });
@@ -289,7 +289,7 @@ jQuery(document).ready(function ($) {
     ScrollTrigger.create({
       trigger: ".pin-box",
       start: "center 50%",
-      end: `+=${gradientBoxs.length * 80}`, // Adjust end based on number of gradient boxes
+      end: `+=${gradientBoxs.length * 170}`, // Adjust end based on number of gradient boxes
       pinSpacing: false,
       pin: true,
       // markers: true, // Remove markers in production
@@ -489,7 +489,7 @@ jQuery(document).ready(function ($) {
     let homeTl = gsap.timeline({
       scrollTrigger: {
         trigger: ".bg-wrapper", // Targeting the wrapper for scroll effects
-        start: "top top", // Start the animation when the top of the bg-wrapper hits the top of the viewport
+        start: "top 40%", // Start the animation when the top of the bg-wrapper hits the top of the viewport
         end: "bottom bottom", // End when the bottom of the bg-wrapper hits the bottom of the viewport
         scrub: true, // Smooth animation on scroll
         invalidateOnRefresh: true, // Recalculate positions on window resize
@@ -502,7 +502,8 @@ jQuery(document).ready(function ($) {
       scale: 1.05,
       duration: 2.5, // Optional animation duration (adjust as needed)
       ease: "power1.out", // Smooth easing
-    }).to(".fade-text", {
+    })
+    .to(".fade-text", {
       opacity: 1,
       duration: 1, // Optional animation duration (adjust as needed)
       // y:"30",
