@@ -670,6 +670,10 @@ video {
   z-index: 9999;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .col-span-12 {
   grid-column: span 12 / span 12;
 }
@@ -2165,6 +2169,10 @@ video {
 
   .lg\:flex {
     display: flex;
+  }
+
+  .lg\:hidden {
+    display: none;
   }
 
   .lg\:h-\[410px\] {
