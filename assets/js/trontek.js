@@ -281,7 +281,7 @@ jQuery(document).ready(function ($) {
     ScrollTrigger.create({
       trigger: ".bg-text",
       start: "top top",
-      end: `+=${gradientBoxs.length * 150}`, // Adjust end based on number of gradient boxes
+      end: `+=${gradientBoxs.length * 80}`, // Adjust end based on number of gradient boxes
       pin: true,
       markers: false, // Remove markers in production
     });
@@ -289,7 +289,7 @@ jQuery(document).ready(function ($) {
     ScrollTrigger.create({
       trigger: ".pin-box",
       start: "center 50%",
-      end: `+=${gradientBoxs.length * 170}`, // Adjust end based on number of gradient boxes
+      end: `+=${gradientBoxs.length * 80}`, // Adjust end based on number of gradient boxes
       pinSpacing: false,
       pin: true,
       // markers: true, // Remove markers in production
@@ -378,7 +378,7 @@ jQuery(document).ready(function ($) {
           scrollTrigger: {
             trigger: section, // Use the parent section
             start: "top 60%", // Adjusted start point for better isolation
-            end: "center 50%",
+            end: "45% 60%",
             scrub: true,
             markers: false, // Enable for debugging
           },
@@ -505,8 +505,8 @@ jQuery(document).ready(function ($) {
     }).to(".fade-text", {
       opacity: 1,
       duration: 1, // Optional animation duration (adjust as needed)
-      y:"30",
-      ease: "power1.out",
+      // y:"30",
+      ease: "power4.out",
     },"-=2")
   }
 
