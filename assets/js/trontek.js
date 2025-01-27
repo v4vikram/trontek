@@ -290,7 +290,7 @@ jQuery(document).ready(function ($) {
       trigger: ".pin-box",
       start: "center 50%",
       end: `+=${gradientBoxs.length * 170}`, // Adjust end based on number of gradient boxes
-      pinSpacing:false,
+      pinSpacing: false,
       pin: true,
       // markers: true, // Remove markers in production
     });
@@ -300,7 +300,7 @@ jQuery(document).ready(function ($) {
 
     gradientBoxs.forEach((box, i) => {
       gsap.from(box, {
-        opacity:  i == 0 ? 1 :0,
+        opacity: i == 0 ? 1 : 0,
         y: 50, // Optional: Add vertical motion for 
         // better effect
         duration: 2.5,
@@ -478,14 +478,40 @@ jQuery(document).ready(function ($) {
 
     homeTl.to(".luxurious-bg .anime-container", {
       opacity: 1,
-      y: "-230px",
+      y: "-290px",
       duration: 2.5,
       ease: "power1.out",
       stagger: 0.1,
     });
   }
 
-  imageFixedAnimation();
+  function imageBlurdAnimation() {
+    let homeTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".bg-wrapper", // Targeting the wrapper for scroll effects
+        start: "top top", // Start the animation when the top of the bg-wrapper hits the top of the viewport
+        end: "bottom bottom", // End when the bottom of the bg-wrapper hits the bottom of the viewport
+        scrub: true, // Smooth animation on scroll
+        invalidateOnRefresh: true, // Recalculate positions on window resize
+        markers: true, // Debugging (set to false for production)
+      },
+    });
+
+    homeTl.to(".bg-wrapper img", {
+      filter: "blur(0px)", // Apply the blur filter
+      scale: 1.05,
+      duration: 2.5, // Optional animation duration (adjust as needed)
+      ease: "power1.out", // Smooth easing
+    }).to(".fade-text", {
+      opacity: 1,
+      duration: 1, // Optional animation duration (adjust as needed)
+      y:"30",
+      ease: "power1.out",
+    },"-=2")
+  }
+
+  imageBlurdAnimation();
+
 
   function AboutPageAnimation() {
     let svgTl = gsap.timeline({
@@ -530,7 +556,7 @@ jQuery(document).ready(function ($) {
       })
   }
 
-  // AboutPageAnimation()
+  AboutPageAnimation()
 });
 
 
