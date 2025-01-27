@@ -292,7 +292,7 @@ jQuery(document).ready(function ($) {
       end: `+=${gradientBoxs.length * 170}`, // Adjust end based on number of gradient boxes
       pinSpacing:false,
       pin: true,
-      markers: true, // Remove markers in production
+      // markers: true, // Remove markers in production
     });
 
 
@@ -506,12 +506,12 @@ jQuery(document).ready(function ($) {
     })
       .to(".circle1", {
         ease: "power1.inOut",
-        markers: true,
+        // markers: true,
         opacity: 1,
       })
       .to(".features-line", {
         ease: "power1.inOut",
-        markers: true,
+        // markers: true,
         width: "5vw",
         scrub: true,
         stagger: true
@@ -525,7 +525,7 @@ jQuery(document).ready(function ($) {
       }, "=+2")
       .to(".circle2", {
         ease: "power1.inOut",
-        markers: true,
+        // markers: true,
         opacity: 1,
       })
   }

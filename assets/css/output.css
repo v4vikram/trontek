@@ -638,6 +638,10 @@ video {
   top: 80%;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .-z-10 {
   z-index: -10;
 }
@@ -660,6 +664,10 @@ video {
 
 .z-\[9999\] {
   z-index: 9999;
+}
+
+.z-20 {
+  z-index: 20;
 }
 
 .col-span-12 {
@@ -1176,6 +1184,10 @@ video {
 
 .overflow-x-auto {
   overflow-x: auto;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 .text-clip {
@@ -2143,6 +2155,10 @@ video {
     display: flex;
   }
 
+  .lg\:hidden {
+    display: none;
+  }
+
   .lg\:h-\[410px\] {
     height: 410px;
   }
@@ -2243,6 +2259,10 @@ video {
 
   .xl\:top-\[39\%\] {
     top: 39%;
+  }
+
+  .xl\:bottom-28 {
+    bottom: 7rem;
   }
 
   .xl\:mx-0 {
