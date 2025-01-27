@@ -275,55 +275,34 @@ jQuery(document).ready(function ($) {
 
   function gradienAnimation() {
     const gradientBoxs = document.querySelectorAll(".gradient-box");
-    console.log("gradientBoxs", gradientBoxs)
-
+  
     // Pin the engineer section
     ScrollTrigger.create({
       trigger: ".bg-text",
       start: "top top",
-      end: `+=${gradientBoxs.length * 150}`, // Adjust end based on number of gradient boxes
-      pin: true,
-      markers: false, // Remove markers in production
-    });
-    // Pin the engineer section
-    ScrollTrigger.create({
-      trigger: ".pin-box",
-      start: "center 50%",
-      end: `+=${gradientBoxs.length * 170}`, // Adjust end based on number of gradient boxes
-      pinSpacing:false,
+      end: `+=${gradientBoxs.length * 300}`, // Adjust end based on number of gradient boxes
       pin: true,
       markers: true, // Remove markers in production
     });
-
-
-
-
+  
     gradientBoxs.forEach((box, i) => {
       gsap.from(box, {
-        opacity:  i == 0 ? 1 :0,
-        y: 50, // Optional: Add vertical motion for 
-        // better effect
-        duration: 2.5,
-        ease: "power1.out",
+        opacity: 0,
+        y: 50, // Optional: Add vertical motion for better effect
         scrollTrigger: {
           trigger: box,
-          start: "top 50%", // Adjust trigger points
+          start: "top 80%", // Adjust trigger points
           end: "bottom 40%",
           scrub: true,
-          markers: false,
           stagger: true,
-          onLeave: () => {
-            // Fade the current box out
-            gsap.to(box, { opacity: i == 4 ? 1 : 0, duration: 0.5 });
-          },
         },
       });
     });
   }
-
+  
   // Call the function
   gradienAnimation();
-
+  
 
 });
 
@@ -478,7 +457,7 @@ jQuery(document).ready(function ($) {
 
     homeTl.to(".luxurious-bg .anime-container", {
       opacity: 1,
-      y: "-230px",
+      y: "-500px",
       duration: 2.5,
       ease: "power1.out",
       stagger: 0.1,

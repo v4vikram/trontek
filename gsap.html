@@ -1,48 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Tilt Animation</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GSAP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/splitting@1.0.6/dist/splitting.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="./assets/css/output.css" />
+  <link rel="stylesheet" href="./assets/css/trontek.css" />
+
+  <main>
+ 
+    <div class="section h-screen bg-yellow-200">
+      <h2 class="heading text-4xl font-bold text-center text-white split-text" data-splitting>Section 4</h2>
+    </div>
+
+    <section class="luxurious-bg  lg:min-h-[100vh] relative">
+      <div class="">
+        <img src="assets/img/luxurious.webp" alt="luxurious" class="w-full h-[70vh] lg:h-full object-fill">
+      </div>
+      <div class="container-xl">
+        <div class="absolute bottom-28">
+          <div class="container-xl text-center pt-[50px] relative z-10 anime-container">
+            <h2 class="h2">
+              Powering Your<br>
+              Journey
+            </h2>
+            <p class="text-white mt-[20px] lg:mt-[40px] lg:w-[80%] mx-auto sub-para">We bring you the most reliable and
+              efficient
+              golf cart
+              batteries to keep you rolling smoothly, whether you’re enjoying a leisurely game of golf or using your
+              cart
+              for everyday tasks. With advanced technology and a commitment to excellence, our batteries deliver the
+              performance, durability, and value you can count on.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section h-screen bg-gray-700 relative">
+      <h2 class="heading text-4xl font-bold text-center text-white split-text" data-splitting>Section 5</h2>
+    </div>
+
+  </main>
+
+
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.5/bundle.min.js"></script>
+  <!-- GSAP Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- ScrollTrigger Plugin -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lenis -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.5/bundled/lenis.min.js"></script>
+  <!-- Splitting.js -->
+  <script src="https://cdn.jsdelivr.net/npm/splitting@1.0.6/dist/splitting.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+  <script src="./assets/js/gsap.js"></script>
 </head>
-<body class="flex items-center justify-center min-h-screen bg-gray-100">
 
-  <!-- Box with Image -->
-  <div class="group relative w-64 h-64 overflow-hidden rounded-xl shadow-lg bg-white hover:bg-gray-50">
-    <img 
-      src="assets/img/trontek-slider-1.webp" 
-      alt="Random" 
-      class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out"
-    />
-  </div>
+<body>
 
-  <script>
-    // GSAP Hover Animation
-    const group = document.querySelector(".group");
-    const img = group.querySelector("img");
-
-    group.addEventListener("mouseenter", () => {
-      gsap.to(img, {
-        rotateY: -10, // Tilt on Y-axis
-        rotateX: -20, // Tilt on X-axis
-        scale: 1.07, // Slight zoom-in effect
-        duration: 0.8, // Smooth transition
-        ease: "power3.out", // Smooth easing
-      });
-    });
-
-    group.addEventListener("mouseleave", () => {
-      gsap.to(img, {
-        rotateY: 0,
-        rotateX: 0,
-        scale: 1,
-        duration: 0.8,
-        ease: "power3.out",
-      });
-    });
-  </script>
 </body>
+
 </html>
