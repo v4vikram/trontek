@@ -462,6 +462,7 @@ jQuery(document).ready(function ($) {
   }
   cardAnimation()
 
+
   function imageFixedAnimation() {
     let homeTl = gsap.timeline({
       scrollTrigger: {
@@ -488,30 +489,33 @@ jQuery(document).ready(function ($) {
   function imageBlurdAnimation() {
     let homeTl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".bg-wrapper", // Targeting the wrapper for scroll effects
-        start: "top 40%", // Start the animation when the top of the bg-wrapper hits the top of the viewport
-        end: "bottom bottom", // End when the bottom of the bg-wrapper hits the bottom of the viewport
-        scrub: true, // Smooth animation on scroll
-        invalidateOnRefresh: true, // Recalculate positions on window resize
-        markers: true, // Debugging (set to false for production)
+        trigger: ".luxurious-bg",
+        start: "top 50%",
+        end: "60% 80%",
+        scrub: true,
+        markers: true,
       },
     });
-
-    homeTl.to(".bg-wrapper img", {
-      filter: "blur(0px)", // Apply the blur filter
-      scale: 1.05,
-      duration: 2.5, // Optional animation duration (adjust as needed)
-      ease: "power1.out", // Smooth easing
-    })
-    .to(".fade-text", {
-      opacity: 1,
-      duration: 1, // Optional animation duration (adjust as needed)
-      // y:"30",
-      ease: "power4.out",
-    },"-=2")
+  
+    homeTl
+      .to(".luxurious-bg", {
+        "--blur-amount": "0px", // Update blur variable
+        // "--scale-amount": "1", // Update scale variable
+        duration: 1, // Animation duration
+      },"start")
+      .to(".fade-text", {
+        opacity: 1, // Fade in text
+        duration: 1,
+        ease: "power4.out",
+      },"start");
   }
-
+  
   imageBlurdAnimation();
+  
+  
+  
+  
+  
 
 
   function AboutPageAnimation() {

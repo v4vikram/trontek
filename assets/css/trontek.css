@@ -564,18 +564,44 @@ p {
 }
 /* ================= End About Page ====================== */
 
-/* .dream-items img,
-.power-items img
-{
-  filter: brightness(1) blur(4px);
-} */
-.bg-wrapper img{
-  filter: blur(5px);
-  scale: 1.05
+
+.luxurious-bg {
+  position: relative;
+  background-image: url("../img/luxurious.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black; /* Solid fallback color */
+  overflow: hidden; /* Prevent pseudo-element overflow */
+  --blur-amount: 5px; /* CSS variable for blur */
+  --scale-amount: 1.1; /* CSS variable for scale */
 }
-.fade-text{
-  opacity: 0;
+
+.luxurious-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit; /* Duplicate the background image */
+  background-size: inherit;
+  background-position: inherit;
+  background-repeat: inherit;
+  filter: blur(var(--blur-amount)); /* Use CSS variable */
+  /* transform: scale(var(--scale-amount)); Use CSS variable */
+  z-index: 1; /* Layer below text */
+  transition: filter 0.6s ease, transform 0.6s ease; /* Smooth animation */
 }
+
+.fade-text {
+  position: relative;
+  z-index: 2; /* Ensure text is above blur effect */
+  opacity: 0; /* Hidden initially */
+  transition: opacity 0.6s ease; /* Smooth fade-in */
+}
+
+
 /* ======= Footer ========== */
 .footer-menu-link {
   font-size: 16px;
@@ -609,6 +635,7 @@ p {
 @media(max-width: 767px) {
   .featured {
     gap: 2rem;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
+  
 }
