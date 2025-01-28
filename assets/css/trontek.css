@@ -633,7 +633,7 @@ p {
   }
 }
 @media(max-width: 767px) {
-  .featured {
+  .featured, .featured2 {
     gap: 2rem;
     grid-template-columns: 1fr !important;
   }

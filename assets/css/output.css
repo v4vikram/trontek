@@ -1507,6 +1507,10 @@ video {
   padding-top: 50px;
 }
 
+.pl-3 {
+  padding-left: 0.75rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2137,6 +2141,10 @@ video {
     padding-top: 30px;
   }
 
+  .md\:text-left {
+    text-align: left;
+  }
+
   .md\:text-\[22px\] {
     font-size: 22px;
   }
@@ -2323,6 +2331,10 @@ video {
     padding-top: 72vh;
   }
 
+  .lg\:pl-0 {
+    padding-left: 0px;
+  }
+
   .lg\:text-\[30px\] {
     font-size: 30px;
   }
@@ -2376,6 +2388,10 @@ video {
 
   .xl\:mt-\[50px\] {
     margin-top: 50px;
+  }
+
+  .xl\:block {
+    display: block;
   }
 
   .xl\:\!h-\[500px\] {
