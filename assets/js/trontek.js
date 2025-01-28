@@ -493,7 +493,7 @@ jQuery(document).ready(function ($) {
         start: "top 50%",
         end: "60% 80%",
         scrub: true,
-        markers: true,
+        // markers: true,
       },
     });
   
