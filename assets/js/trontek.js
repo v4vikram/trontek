@@ -561,7 +561,7 @@ jQuery(document).ready(function ($) {
       })
   }
 
-  AboutPageAnimation()
+  // AboutPageAnimation()
 });
 
 
