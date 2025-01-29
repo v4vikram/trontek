@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
   $(".sub-menu").hide();
   $(".dropdown a").click(function (e) {
 
-    e.preventDefault();
+    // e.preventDefault();
     $(this).next(".sub-menu").slideToggle();
 
     // Toggle the icons
