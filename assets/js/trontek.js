@@ -305,7 +305,7 @@ jQuery(document).ready(function ($) {
     ScrollTrigger.create({
       trigger: ".pin-box",
       start: "center 50%",
-      end: `+=${gradientBoxs.length * 125}`, // Adjust end based on number of gradient boxes
+      end: `+=${gradientBoxs.length * 135}`, // Adjust end based on number of gradient boxes
       pinSpacing: false,
       pin: true,
       // markers: true, // Remove markers in production
@@ -324,9 +324,9 @@ jQuery(document).ready(function ($) {
         scrollTrigger: {
           trigger: box,
           start: "top 65%", // Adjust trigger points
-          end: "center 65%",
+          end: "center 58%",
           scrub: true,
-          // markers: true,
+          markers: false,
           stagger: true,
           pinSpacing: false,
           onLeave: () => {

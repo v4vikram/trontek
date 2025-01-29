@@ -320,8 +320,6 @@ jQuery(document).ready(function ($) {
       });
     });
   }
-
-  // Call the function
   gradienAnimation();
 
 
