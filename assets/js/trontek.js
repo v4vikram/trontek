@@ -31,6 +31,7 @@ jQuery(document).ready(function ($) {
           // Scrolling down - hide logo
           gsap.to(logo, {
             opacity: 0,
+            display:"none",
             y: -20, // Move up
             duration: 0.2,
             ease: "power1.out",
@@ -39,6 +40,7 @@ jQuery(document).ready(function ($) {
           // Only show logo when near the top
           gsap.to(logo, {
             opacity: 1,
+            display:"block",
             y: 0, // Reset position
             duration: 0.2,
             ease: "power1.out",
