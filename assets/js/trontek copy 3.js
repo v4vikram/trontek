@@ -1,20 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
 Splitting();
 jQuery(document).ready(function ($) {
-  $(".sub-menu").hide();
-  $(".dropdown a").click(function (e) {
 
-    e.preventDefault();
-    $(this).next(".sub-menu").slideToggle();
-
-    // Toggle the icons
-    let icon = $(this).find("i");
-    if (icon.hasClass("fa-plus")) {
-      icon.removeClass("fa-plus").addClass("fa-minus");
-    } else {
-      icon.removeClass("fa-minus").addClass("fa-plus");
-    }
-  });
 
   function HeaderFade() {
     const menubar = document.querySelector("#header .cursor-pointer i");
@@ -294,10 +281,7 @@ jQuery(document).ready(function ($) {
     ScrollTrigger.create({
       trigger: ".bg-text",
       start: "top top",
-      // endTrigger: ".luxurious-bg", 
-      end: `+=${gradientBoxs.length * 152}`,
-      // endTrigger: ".luxurious-bg", 
-      // end: "top bottom", 
+      end: `+=${gradientBoxs.length * 170}`, // Adjust end based on number of gradient boxes
       pin: true,
       markers: false, // Remove markers in production
     });
@@ -305,7 +289,7 @@ jQuery(document).ready(function ($) {
     ScrollTrigger.create({
       trigger: ".pin-box",
       start: "center 50%",
-      end: `+=${gradientBoxs.length * 125}`, // Adjust end based on number of gradient boxes
+      end: `+=${gradientBoxs.length * 170}`, // Adjust end based on number of gradient boxes
       pinSpacing: false,
       pin: true,
       // markers: true, // Remove markers in production
@@ -323,12 +307,11 @@ jQuery(document).ready(function ($) {
         ease: "power1.out",
         scrollTrigger: {
           trigger: box,
-          start: "top 65%", // Adjust trigger points
-          end: "center 65%",
+          start: "top 50%", // Adjust trigger points
+          end: "bottom 40%",
           scrub: true,
-          // markers: true,
+          markers: false,
           stagger: true,
-          pinSpacing: false,
           onLeave: () => {
             // Fade the current box out
             gsap.to(box, { opacity: i == 4 ? 1 : 0, duration: 0.5 });
@@ -337,6 +320,8 @@ jQuery(document).ready(function ($) {
       });
     });
   }
+
+  // Call the function
   gradienAnimation();
 
 
@@ -511,26 +496,26 @@ jQuery(document).ready(function ($) {
         // markers: true,
       },
     });
-
+  
     homeTl
       .to(".luxurious-bg", {
         "--blur-amount": "0px", // Update blur variable
         // "--scale-amount": "1", // Update scale variable
         duration: 1, // Animation duration
-      }, "start")
+      },"start")
       .to(".fade-text", {
         opacity: 1, // Fade in text
         duration: 1,
         ease: "power4.out",
-      }, "start");
+      },"start");
   }
-
+  
   imageBlurdAnimation();
-
-
-
-
-
+  
+  
+  
+  
+  
 
 
   function AboutPageAnimation() {

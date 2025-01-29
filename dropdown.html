@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fixed Dropdown</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".dropdown").click(function () {
+        $(this).next(".sub-menu").slideToggle(); // Correctly targets the next sibling <p>
+      });
+    });
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .dropdown {
+      width: 200px;
+      position: relative;
+      margin: 10px 0; /* Ensure margin around the dropdown */
+    }
+
+    button {
+      width: 100%; /* Make the button full-width */
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    p {
+      display: none; /* Start hidden */
+      margin: 0;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div class="dropdown">
+    <button>Toggle Paragraph</button>
+    <p>This is a paragraph. It will now toggle smoothly downward instead of appearing above the button.</p>
+  </div>
+</body>
+</html>

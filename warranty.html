@@ -17,53 +17,69 @@
 </head>
 
 <body>
-  <header class="fixed top-[30px] bg-transparent w-full z-50" id="header">
+  <header class="fixed top-[30px] bg-transparent w-full z-[999]" id="header">
     <div class="container-xl">
       <div class="flex items-center justify-between">
-        <div class="w-[110px]">
-          <div class="cursor-pointer" id="openMenu">
-            <div class="bar1"></div><i class="fa-solid fa-bars text-orange text-[32px]"></i>
+        <div class="w-[110px] h-elm1">
+          <div class="cursor-pointer topBottom" id="openMenu">
+            <i class="fa-solid fa-bars text-orange text-[32px]"></i>
           </div>
         </div>
-        <a href="index.html">
+        <a href="index.html" class="topBottom">
           <img src="./assets/img/trontek-logo.webp" alt="trontek-logo" class="w-[100px] md:w-[130px]">
         </a>
-        <a href="#" class="o-button hidden md:block">Request a Quote</a>
+        <div class="topBottom hidden md:block">
+          <a href="contact.html" class="o-button hidden md:block">Request a Quote</a>
+        </div>
+
       </div>
     </div>
   </header>
 
 
-  <!-- Menu -->
-  <div class="menu bg-black w-[90%] md:w-[50%] h-screen text-white fixed top-0 z-[9999] pt-[30px]">
-    <div class="flex justify-between  items-center px-[20px]">
-      <a href="index.html" class="">
-        <img src="./assets/img/trontek-logo.webp" alt="trontek-logo" class="w-[130px]">
-      </a>
-      <div class="cursor-pointer" id="closeMenu">
-        <i class="fa-solid fa-xmark text-orange text-[50px]"></i>
 
+    <!-- Menu -->
+    <div class="menu bg-black w-[90%] md:w-[30%] h-full text-white fixed top-0 z-[9999] pt-[30px]">
+      <div class="flex justify-between  items-center px-[20px]">
+        <a href="index.html" class="">
+          <img src="./assets/img/trontek-logo.webp" alt="trontek-logo" class="w-[130px]">
+        </a>
+        <div class="cursor-pointer" id="closeMenu">
+          <i class="fa-solid fa-xmark text-orange text-[50px]"></i>
+  
+        </div>
+      </div>
+      <div class="flex. flex-col. justify-evenly. text-right h-[70%]">
+  
+        <nav class="mt-[10vh]">
+          <ul class="menu-list pr-[20px]">
+            <li><a href="index.html" class="menu-links">Home</a></li>
+            <li class="dropdown">
+  
+              <a href="product.html" class="menu-links">
+                <span class="text-orange">
+                  <i class="fas fa-plus"></i>
+                </span>
+                Products</a>
+  
+  
+              <ul class="sub-menu">
+                <li><a href="#" class="menu-links">Technology</a></li>
+                <li><a href="#" class="menu-links">Applications</a></li>
+              </ul>
+            </li>
+  
+            <li><a href="about.html" class="menu-links">About Us</a></li>
+            <li><a href="contact.html" class="menu-links">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="menu-support flex flex-col justify-center px-[20px] mt-[10vh]">
+          <!-- <a href="#" class="menu-links">Support</a> -->
+          <a href="warranty.html" class="menu-links">Warranty</a>
+          <a href="dealer.html" class="menu-links">Become a Dealer</a>
+        </div>
       </div>
     </div>
-    <div class="flex flex-col justify-evenly text-right h-[70%]">
-
-      <nav>
-        <ul class="menu-list pr-[20px]">
-          <li><a href="index.html" class="menu-links">Home</a></li>
-          <li><a href="product.html" class="menu-links">Products</a></li>
-          <li><a href="#" class="menu-links">Technology</a></li>
-          <li><a href="#" class="menu-links">Applications</a></li>
-          <li><a href="#" class="menu-links">Why Trontek USA</a></li>
-          <li><a href="contact.html" class="menu-links">Contact Us</a></li>
-        </ul>
-      </nav>
-      <div class="menu-support flex flex-col justify-center px-[20px]">
-        <a href="#" class="menu-links">Support</a>
-        <a href="#" class="menu-links">Warranty</a>
-        <a href="dealer.html" class="menu-links">Become a Dealer</a>
-      </div>
-    </div>
-  </div>
   <main class="overflow-hidden">
     <!-- product slider -->
     <section class="mt-[120px] md:mt-[180px]">
@@ -135,14 +151,10 @@
         <h2 class="h2 text-center mb-[50px] font-semibold">Claim Procedure</h2>
 
         <div class="lg:px-[100px]">
-          <p class="mb-4"> 1. Please priorly contact your dealer to verify the suspected defective device.</p>
-          <p class="mb-4"> 2. Please follow your dealer's guide to provide sufficient information when your device is
-            suspected faulty
-            with the warranty card, product purchase invoice, and other related documents if required.</p>
-          <p class="mb-4">
-            3. Once the fault of your device is confirmed, your dealer is required to send the warranty claim to Trontek
-            or an authorized service partner with all the necessary information provided.</p>
-          <p class="mb-4"> 4. Meanwhile, you can contact Trontek for help via:</p>
+          <p class="mb-4">1. Please priorly contact your dealer to verify the suspected defective device.</p>
+          <p class="mb-4">2. Please follow your dealer’s guide to provide sufficient information when your device is suspected faulty with the warranty card, product purchase invoice, and other related documents if required.</p>
+          <p class="mb-4">3. Once the fault of your device is confirmed, your dealer is required to send the warranty claim to ROYPOW or an authorized service partner with all the necessary information provided.</p>
+          <p class="mb-4">4. Meanwhile, you can contact ROYPOW for help via:</p>
         </div>
 
         <!-- <p class="uppercase text-[25px] font-semibold italic">- Trontek provides warranty under the<br>
@@ -177,8 +189,7 @@
             +91-11-48022444</a>
           <a class="footer-menu-link" href="mailto:golf@trontek.com"><i
               class="fa-solid fa-envelope text-white"></i>&nbsp; golf@trontek.com</a>
-          <a class="footer-menu-link" href="www.trontek.com"><i class="fa-solid fa-globe text-white"></i>&nbsp;
-            www.trontek.com</a>
+        
         </div>
         <!-- 2nd col -->
         <div class="lg:pl-[100px]">
@@ -197,8 +208,7 @@
             +91-11-48022444</a>
           <a class="footer-menu-link" href="mailto:someone@yoursite.com?subject=Mail from Websie Site"><i
               class="fa-solid fa-envelope text-white"></i>&nbsp; info@trontek.com</a>
-          <a class="footer-menu-link" href="www.trontek.com"><i class="fa-solid fa-globe text-white"></i>&nbsp;
-            www.trontek.com</a>
+        
         </div> -->
         <!-- 4th col -->
         <div>
